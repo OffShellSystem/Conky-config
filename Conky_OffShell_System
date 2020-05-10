@@ -1,0 +1,79 @@
+background no
+font Snap.se:size=8
+xftfont Snap.se:size=8
+use_xft yes
+xftalpha 0.1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+minimum_size 200 6
+maximum_width 300
+default_color f21d1d
+default_shade_color 000000
+default_outline_color 000000
+alignment top_right
+gap_x 10
+gap_y 50
+no_buffers yes
+cpu_avg_samples 2
+override_utf8_locale no
+uppercase no # set to yes if you want all text to be in uppercase
+use_spacer no
+own_window_argb_visual yes
+
+TEXT
+#Aqui empieza la configuracion de los datos que se muestran
+${color red}${font Star Wars:size=26}OffShell System
+${color orange}${font Star Wars:size=26}${alignc}|${time %H:%M}|${font}
+${color green}${alignc}${font Star Wars:size=10} --${time %d}/${time %m}/${time %Y}--
+#El primero es el nombre del sistema operativo y la version del kernel
+${color orange}$hr
+${color red}${font Ubuntu:style=bold:size=14}Nucleo
+${color green}${font Ubuntu:style=bold:size=10}$sysname: $alignr${color yellow} $kernel
+${color green}Tiempo actividad:${color yellow}$alignr${font Ubuntu:style=bold:size=10} $uptime
+${font Ubuntu:style=bold:size=10}${color green}Maquina: $alignr${color yellow}$nodename
+#Esto nos muestra los dos procesadores y una barra de cada uno de ellos con su uso
+${color orange}${font Ubuntu:style=bold:size=14} $hr
+${color red}${font Ubuntu:style=bold:size=14}Rendimiento CPU
+${color green}${font Ubuntu:style=bold:size=10}>CPU1: ->${color yellow}${cpu cpu1}%${color orange}$alignc${cpubar cpu1}
+${color green}>CPU2: ->${color yellow}${cpu cpu2}%${color orange}$alignc${cpubar cpu2}
+${color green}>CPU3: ->${color yellow}${cpu cpu3}%${color orange}$alignc${cpubar cpu3}
+${color green}>CPU4: ->${color yellow}${cpu cpu4}%${color orange}$alignc${cpubar cpu4}
+#Esto nos muestra la particion Home, la RAM y la sawp con una barra cada una y sus datos
+${color orange}${font Ubuntu:style=bold:size=14} $hr
+${color red}${font Ubuntu:style=bold:size=14}Memorias de Africa
+${color green}${font Ubuntu:style=bold:size=10}HOME ${color yellow} $alignr ${fs_used /home} / ${fs_size /home}
+${color orange}${fs_bar /home}
+${color green}${font Ubuntu:style=bold:size=10}RAM ${color yellow}$alignr $mem / $memmax
+${color orange}${membar}
+${color green}${font Ubuntu:style=bold:size=10}SWAP ${color yellow}$alignr $swap / $swapmax
+${color orange}$swapbar
+#Esto nos muestra la conexion con una barra y su potencia
+${color orange}${font Ubuntu:style=bold:size=14}$hr
+${color red}${font Ubuntu:style=bold:size=14}Parametros Red
+${color green}${font Ubuntu:style=bold:size=10}$alignc<Ejecutando Red Cableada>
+#Esto nos muestra la velocidad de descarga y subida de internet con graficos
+${font Ubuntu:style=bold:size=10}>Descarga $alignr ${color yellow}${downspeed eno1}/s
+${downspeedgraph eno1 30,210 ffffff ffffff}
+${color green}${font Ubuntu:style=bold:size=10}>Subida $alignr ${color yellow}${upspeed eno1}/s
+${upspeedgraph eno1 30,210 ffffff ffffff}
+#Esto muestra el uso de la CPU de las aplicaciones que mas hacen uso de ella
+${color orange}${font Ubuntu:style=bold:size=14}$hr
+${color red}${font Ubuntu:style=bold:size=14}CPU aplicaciones
+${color green}${font Ubuntu:style=bold:size=10}${top name 1}$alignr${color yellow}${top cpu 1}%
+${color green}${top name 2}$alignr${color yellow}${top cpu 2}%
+${color green}${top name 3}$alignr${color yellow}${top cpu 3}%
+#Esto nos muestra el procentaje de RAM que usan las aplicaciones de ella
+${color orange}${font Ubuntu:style=bold:size=14}$hr
+${color red}${font Ubuntu:style=bold:size=14}RAM aplicaciones
+${color green}${font Ubuntu:style=bold:size=10}${top_mem name 1}$alignr${color yellow}${top_mem mem 1}%
+${color green}${top_mem name 2}$alignr${color yellow}${top_mem mem 2}%
+${color green}${top_mem name 3}$alignr${color yellow}${top_mem mem 3}%
