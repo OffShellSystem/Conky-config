@@ -67,13 +67,13 @@ ${color green}${font Ubuntu:style=bold:size=10}>Subida $alignr ${color yellow}${
 ${upspeedgraph eno1 30,210 ffffff ffffff}
 #Esto muestra el uso de la CPU de las aplicaciones que mas hacen uso de ella
 ${color orange}${font Ubuntu:style=bold:size=14}$hr
-${color red}${font Ubuntu:style=bold:size=14}CPU aplicaciones
+${color red}${font Ubuntu:style=bold:size=14}CPU Procesos Activos
 ${color green}${font Ubuntu:style=bold:size=10}${top name 1}$alignr${color yellow}${top cpu 1}%
 ${color green}${top name 2}$alignr${color yellow}${top cpu 2}%
 ${color green}${top name 3}$alignr${color yellow}${top cpu 3}%
 #Esto nos muestra el procentaje de RAM que usan las aplicaciones de ella
 ${color orange}${font Ubuntu:style=bold:size=14}$hr
-${color red}${font Ubuntu:style=bold:size=14}RAM aplicaciones
+${color red}${font Ubuntu:style=bold:size=14}RAM Procesos Activos
 ${color green}${font Ubuntu:style=bold:size=10}${top_mem name 1}$alignr${color yellow}${top_mem mem 1}%
 ${color green}${top_mem name 2}$alignr${color yellow}${top_mem mem 2}%
 ${color green}${top_mem name 3}$alignr${color yellow}${top_mem mem 3}%
